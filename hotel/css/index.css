@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+h3 {
+    font-size: 2.35rem;
+    margin-bottom: 10px;
+}
+
+header {
+    background: #3F3351;
+    width: 100%;
+    height: 80px;
+}
+
+header nav {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+header nav a {
+    color: white;
+}
+
+header nav h1 {
+    width: 130px;
+    float: left;
+    margin-top: 20px;
+}
+
+header nav h1 img {
+    width: 100%;
+}
+
+header nav .gnb {
+    width: 1000px;
+    height: 30px;
+    margin-left: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .gnb > li {
+    float: left;
+    height: 80px;
+    line-height: 78.5px;
+    text-align: center;
+}
+
+header nav .gnb > li > a {
+    font-size: 1.3rem;
+}
+
+header nav .submenu {
+    display: none;
+}
+
+header nav .submenu > li > a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    background: #864879;
+    transition: all 0.3s;
+    line-height: 30px;
+}
+
+header nav .submenu > li:hover > a {
+    background: #E9A6A6;
+    color: #864879;
+}
+
+#main {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+#main #slide {
+    width: 1200px;
+    height: 720px;
+    position: relative;
+    overflow: hidden;
+}
+
+#main #slide div {
+    position: absolute;
+    width: 1200px;
+}
+
+#main #slide img {
+    width: 100%;
+}
+
+#main #selectBox {
+    width: 870px;
+    height: 120px;
+    margin: 40px auto 0;
+}
+
+input[type='date']::before {
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+input[type='date']:focus::before,
+input[type='date']:valid::before {
+  display: none;
+}
+
+#main #selectBox nav {
+    float: left;
+    border: 1px solid black;
+    position: relative;
+    z-index: 1;
+}
+
+#main #selectBox .hr {
+    width: 1px;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    background: #808080;
+    right: 180px;
+    top: 5px;
+}
+
+#main #selectBox input {
+    width: 180px;
+    height: 60px;
+    text-align: right;
+    font-family: 'Libre Bodoni', serif;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+}
+
+#main #selectBox input::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: #808080;
+    margin-left: 5px;
+}
+
+#main #selectBox select {
+    width: 180px;
+    height: 60px;
+    text-align: right;
+    font-family: 'Libre Bodoni', serif;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+}
+
+#main #selectBox span {
+    display: block;
+    width: 120px;
+    height: 60px;
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 60px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+#main #selectBox span:hover {
+    box-shadow: 0 60px 0 0  rgba(157, 55, 216, 0.25) inset, 
+                0 -60px 0 0 rgba(157, 55, 216, 0.25) inset;
+}
+
+#main #selectBox p {
+    font-size: 1.4rem;
+    float: right;
+    margin-top: 10px;
+    margin-right: 100px;
+    color: #4D4D4D;
+}
+
+#room {
+    width: 1200px;
+    height: 510px;
+    margin: 50px auto 90px;
+}
+
+#room nav {
+    width: 1200px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#room dl {
+    float: left;
+    width: 340px;
+    margin-left: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#room dl:nth-of-type(1) {
+    margin-left: 0;
+}
+
+#room dl:hover img {
+    transform: scale(1.2);
+}
+
+#room dl img {
+    width: 100%;
+    transition: all 0.3s;
+}
+
+#room dl dt {
+    text-align: center;
+    color: black;
+    font-size: 1.375rem;
+    background: white;
+    position: absolute;
+    width: 340px;
+    height: 45px;
+    line-height: 45px;
+    z-index: 2;
+}
+
+#room span {
+    display: block;
+    background: black;
+    color: white;
+    width: 170px;
+    height: 70px;
+    margin: 28px auto 0;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#room span:hover {
+    box-shadow: 0 70px 0 0  rgba(157, 55, 216, 0.25) inset, 
+                0 -70px 0 0 rgba(157, 55, 216, 0.25) inset;
+}
+
+#BnW {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#BnW dl {
+    width: 580px;
+    height: 450px;
+    float: left;
+    margin-left: 38px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#BnW dl:nth-of-type(1) {
+    margin-left: 0;
+}
+
+#BnW dl:hover img {
+    transform: scale(1.2);
+}
+
+#BnW dl img {
+    width: 100%;
+    transition: all 0.3s;
+}
+
+#BnW dl dt {
+    text-align: center;
+    color: black;
+    font-size: 1.375rem;
+    width: 580px;
+    height: 45px;
+    line-height: 45px;
+    background: white;
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+}
+
+#tour {
+    width: 1200px;
+    margin: 87px auto 135px;
+    position: relative;
+}
+
+#tour img {
+    width: 100%;
+}
+
+#tour a {
+    width: 150px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+footer {
+    width: 100%;
+    background: #3F3351;
+    height: 360px;
+    position: relative;
+    z-index: 1;
+}
+
+footer a {
+    color: white;
+    transition: all 0.3s;
+}
+
+footer #top {
+    width: 1050px;
+    height: 270px;
+    margin: 0 auto;
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer #top .main > li {
+    float: left;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+footer #top .sub > li {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 47px;
+}
+
+footer #top .sub > li:hover a {
+    color: #E9A6A6;
+}
+
+footer #bottom {
+    width: 100%;
+    height: 90px;
+    background: #1F1D36;
+    position: absolute;
+    z-index: 10;
+}
+
+footer #bottom nav {
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+footer #bottom nav h1 {
+    width: 130px;
+    float: left;
+}
+
+footer #bottom nav h1 img {
+    width: 100%;
+}
+
+footer #bottom nav p {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+}
+

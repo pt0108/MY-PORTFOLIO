@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+body {
+    position: relative;
+}
+
+header {
+    width: 1200px;
+    height: 100px;
+    margin: 20px auto 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header h1 {
+    width: 143px;
+    float: left;
+    margin-right: 30px;
+}
+
+header h1 img {
+    width: 100%;
+}
+
+header ul {
+    float: left;
+    margin-top: 50px;
+}
+
+header ul li {
+    float: left;
+    margin-left: 25px;
+}
+
+header li:hover a {
+    color: #99943C;
+}
+
+header ul li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+header ul li a {
+    font-size: 1.5rem;
+    color: #3f3f3f;
+    transition: all 0.3s;
+}
+
+header ol {
+    float: right;
+    margin-top: 50px;
+}
+
+header ol li {
+    float: left;
+    margin-left: 25px;
+}
+
+header ol li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+header ol li a {
+    font-size: 1.5rem;
+    color: #3f3f3f;
+    transition: all 0.3s;
+}
+
+#main {
+    width: 1200px;
+    height: 420px;
+    margin: 15px auto 0;
+    position: relative;
+    background: #99943C;
+}
+
+#main img {
+    height: 420px;
+    width: 850px;
+    float: left;
+    margin-right: 25px;
+}
+
+#main span {
+    color: white;
+}
+
+#main span h3 {
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+    padding-top: 25px;
+}
+
+#main span p {
+    font-family: 'GongGothicMedium';
+    line-height: 40px;
+    font-size: 1.1rem;
+}
+
+#main #search {
+    width: 860px;
+    height: 70px;
+    background: white;
+    border: 2px solid black;
+    position: absolute;
+    bottom: -40px;
+    left: 172px;
+    padding-left: 17px;
+    overflow: hidden;
+}
+
+#main #search img {
+    width: 30px;
+    height: 31px;
+    margin-top: 17px;
+}
+
+#main #search input {
+    border: none;
+    margin-top: 15px;
+    outline: none;
+    width: 640px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-family: 'GongGothicMedium';
+}
+
+#main #search input::placeholder {
+    color: #9F9F9F;
+    font-size: 1.5rem;
+    font-family: 'GongGothicMedium';
+}
+
+#main #search #searchBtn {
+    float: right;
+    background: #3d3d3d;
+    width: 130px;
+    height: 70px;
+    text-align: center;
+    transition: all 0.7s;
+}
+
+#main #search #searchBtn:hover {
+    box-shadow: 130px 0 0 0 rgba(0, 0, 0, 0.3) inset,
+                -130px 0 0 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+#main #search #searchBtn a {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 70px;
+}
+
+#experience {
+    width: 1100px;
+    height: 650px;
+    margin: 110px auto 130px;
+}
+
+#experience h2 {
+    font-size: 2.7rem;
+}
+
+#experience ul {
+    width: 1070px;
+    height: 430px;
+    margin: 50px 50px;
+}
+
+#experience ul li {
+    float: left;
+    height: 400px;
+    margin-left: 73px;
+}
+
+#experience ul li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+#experience ul li img {
+    height: 100%;
+}
+
+#experience span {
+    display: block;
+    width: 178px;
+    height: 60px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'GongGothicMedium';
+    line-height: 60px;
+    margin: 50px auto 0;
+    cursor: pointer;
+}
+
+#experience span img {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+#book {
+    height: 500px;
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#book h2 {
+    font-size: 2.7rem;
+    margin-bottom: 40px;
+}
+
+#book #sliderBox {
+    width: 1000px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#book #sliderBox ul {
+    width: 2100px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+#book #sliderBox ul li {
+    width: 310px;
+    margin-left: 30px;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    float: left;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+#book #sliderBox ul li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+#book #sliderBox ul li img {
+    width: 100%;
+    height: auto;
+}
+
+#book #sliderBox ul li:hover span#exBox {
+    opacity: 1;
+}
+
+#book #sliderBox ul li:hover span#exBox p {
+    transform: translateY(-100px);
+}
+
+#book #sliderBox ul li span#exBox {
+    position: block;
+    position: absolute;
+    height: 450px;
+    top: 0;
+    width: 310px;
+    background:rgba(0, 0, 0, 0.4);
+    color: white;
+    padding-top: 250px;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+#book #sliderBox ul li span#exBox p {
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+}
+
+#book span {
+    position: absolute;
+    top: 270px;
+    cursor: pointer;
+}
+
+#book span#rightBtn {
+    right: 0;
+}
+
+#banner {
+    width: 1100px;
+    height: 450px;
+    margin: 120px auto 130px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#banner:hover img {
+    transform: scale(1.1) translateX(50px);
+}
+
+#banner img {
+    width: 100%;
+    transition: all 0.4s;
+}
+
+#banner #bannerEx {
+    position: absolute;
+    background:rgba(0, 0, 0, 0.25);
+    width: 460px;
+    height: 450px;
+    top: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding: 30px 30px; 
+}
+
+#banner #bannerEx span {
+    font-size: 1.67rem;
+    font-family: 'GongGothicMedium';
+    margin-bottom: 10px;
+}
+
+#banner #bannerEx h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+#banner #bannerEx h3 {
+    font-size: 3.18rem;
+    margin-bottom: 25px;
+}
+
+#banner #bannerEx p {
+    font-family: 'GongGothicMedium';
+    text-align: left;
+    line-height: 40px;
+    font-size: 0.91rem;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background: black;
+}
+
+footer nav {
+    width: 1200px;
+    height: 145px;
+    margin: 0 auto;
+}
+
+footer nav h1 {
+    width: 140px;
+    float: left;
+    margin-top: 25px;
+}
+
+footer nav h1 img {
+    width: 100%;
+}
+
+footer nav ul {
+    float: left;
+    margin: 60px 260px 0;
+}
+
+footer nav ul li {
+    float: left;
+}
+
+footer nav ul li::after {
+    content: "|";
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+footer nav ul li:last-child::after {
+    content: none;
+}
+
+footer nav ul li a {
+    color: white;
+}

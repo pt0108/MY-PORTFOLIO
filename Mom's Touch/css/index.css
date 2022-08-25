@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    position: relative;
+}
+
+header h1 {
+    width: 500px;
+    margin: 50px auto 0;
+}
+
+header h1 img {
+    width: 100%;
+}
+
+header nav {
+    width: 1060px;
+    height: 70px;
+    background: #706155;
+    margin: 30px auto 40px;
+    padding-left: 36px;
+    padding-right: 30px;
+    position: relative;
+}
+
+header nav ul li {
+    float: left;
+    margin-left: 43px;
+    margin-top: 23px;
+}
+
+header nav ul li:first-child {
+    margin-left: 0;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+
+header nav input {
+    float: right;
+    width: 200px;
+    height: 40px;
+    margin-top: 16px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+header nav a#search {
+    position: absolute;
+    top: 18px;
+    right: 40px;
+}
+
+header nav a#search img {
+    width: 35px;
+    height: 35px;
+}
+
+/* 헤더 메뉴 슬라이드 */
+header nav #headerBg {
+    position: absolute;
+    background: #C7BAB0;
+    width: 660px;
+    height: 300px;
+    top: 70px;
+    left: 0;
+    padding-left: 155px;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 3px 0 4px 2px rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+header nav #headerBg ol {
+    padding-top: 20px;
+    width: 100px;
+    float: left;
+}
+
+header nav #headerBg ol:nth-of-type(2) {
+    width: 115px;
+}
+
+header nav #headerBg ol:nth-of-type(3) {
+    width: 145px;
+}
+
+header nav #headerBg ol:nth-of-type(4) {
+    width: 120px;
+}
+
+header nav #headerBg ol li {
+    margin-bottom: 20px;
+}
+
+header nav #headerBg ol li a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#bigBanner {
+    width: 1060px;
+    height: 410px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#bigBanner #sliderBox {
+    width: 3180px;
+    height: 410px;
+}
+
+#bigBanner #sliderBox div {
+    width: 1060px;
+    float: left;
+}
+
+#bigBanner #sliderBox div img {
+    width: 100%;
+}
+
+#sideUxSlide {
+    margin: 60px auto 0;
+    width: 1060px;
+    height: 310px;
+}
+
+#sideUxSlide #sideUx {
+    background: #706155;
+    width: 210px;
+    height: 310px;
+    float: left;
+}
+
+#sideUxSlide #sideUx ul {
+    padding-top: 23px;
+    padding-left: 13px;
+}
+
+#sideUxSlide #sideUx ul li a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#sideUxSlide #sideUx ul li::after {
+    content:"";
+    width: 185px;
+    height: 2px;
+    background: #B6A68F;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#sideUxSlide #sideUx ul li:nth-of-type(5)::after {
+    content: none;
+}
+
+#sideUxSlide #slider {
+    position: relative;
+    float: right;
+    width: 810px;
+}
+
+#sideUxSlide #slider a#btnL {
+    position: absolute;
+    top: 45%;
+}
+
+#sideUxSlide #slider a#btnR {
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+
+#sideUxSlide #slider #sliderBox {
+    width: 700px;
+    height: 310px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#sideUxSlide #slider #sliderBox ol {
+    width: 1180px;
+    height: 310px;
+}
+
+#sideUxSlide #slider #sliderBox ol li {
+    width: 210px;
+    height: 310px;
+    float: left;
+    margin-left: 34px;
+    background: #F2A900;
+    position: relative;
+}
+
+#sideUxSlide #slider #sliderBox ol li:first-of-type {
+    margin-left: 0;
+}
+
+#sideUxSlide #slider #sliderBox ol li a {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 54px;
+    margin: auto;
+}
+
+#sideUxSlide #slider #sliderBox ol li a span {
+    width: 210px;
+    height: 50px;
+    background: #706155;
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+#sideUxSlide #slider #sliderBox ol li a img {
+    width: 100%;
+    margin-top: 15px;
+}
+
+#mapBanner {
+    width: 1060px;
+    height: 290px;
+    margin: 50px auto 125px;
+    position: relative;
+}
+
+#mapBanner h3 {
+    color: #F2A900;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+#mapBanner #map {
+    width: 220px;
+    height: 220px;
+    position: relative;
+    float: left;
+}
+
+#mapBanner #map img#mapLogo {
+    width: 22px;
+    position: absolute;
+    top: 43px;
+    right: 73px;
+    animation: upDown 1.3s infinite;
+}
+
+@keyframes upDown {
+    50% {
+        top: 34px;
+    }
+}
+
+#mapBanner #map span {
+    position: absolute;
+    width: 56px;
+    height: 16px;
+    background: #5E4C43;
+    color: white;
+    font-family: 'SBAggroM';
+    font-size: 0.6rem;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 19px;
+    top: 75px;
+    right: 57px;
+}
+
+#mapBanner #map img#mapImg {
+    width: 100%;
+}
+
+#mapBanner #event {
+    width: 774px;
+    height: 220px;
+    float: right;
+}
+
+#mapBanner #event img {
+    width: 100%;
+}
+
+#mapBanner #delivery {
+    position: absolute;
+    right: -13px;
+    top: -40px;
+    background: #EEECEA;
+    width: 136px;
+    height: 136px;
+    box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#mapBanner #delivery img#delLogo {
+    width: 106px;
+    margin: 35px 15px 12px;
+}
+
+#mapBanner #delivery h3 {
+    color: black;
+    font-family:'SBAggroM';
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 550px;
+    background: #706155;
+}
+
+footer #top {
+    height: 315px;
+    width: 1060px;
+    margin: auto;
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer #top hr {
+    position: absolute;
+    width: 1060px;
+    height: 2px;
+    border: none;
+    background: #B6A68F;
+    top: 75px;
+}
+
+footer #top ul {
+    float: left;
+}
+
+footer #top ul li {
+    margin-bottom: 22px;
+}
+
+footer #top ul li a {
+    font-size: 0.93rem;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+}
+
+footer #top ul li:nth-of-type(1) a {
+    font-size: 1.5rem;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+}
+
+footer #bottom {
+    background: #5E4C43;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem;
+    height: 235px;
+}
+
+footer #bottom ul {
+    width: 680px;
+    height: 55px;
+    padding-top: 30px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+footer #bottom ul li {
+    float: left;
+    margin-left: 40px; 
+}
+
+footer #bottom ul li a {
+    color: white;
+}
+
+footer #bottom p {
+    width: 680px;
+    margin: 20px auto 19px;
+    text-align: center;
+    color: white;
+    line-height: 26px;
+}
+
+footer #bottom ol {
+    width: 130px;
+    height: 30px;
+    margin: auto;
+}
+
+footer #bottom ol li {
+    float: left;
+    width: 30px;
+    margin-left: 19px;
+}
+
+footer #bottom ol li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+footer #bottom ol li img {
+    width: 100%;
+}
+

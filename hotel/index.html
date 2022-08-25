@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height,viewport-fit=cover,shrink-to-fit=no">    
+    <title>AMOROT HOTEL</title>    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/index.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="#"><img src="images/logo.svg" alt="" /></a></h1>
+
+            <ul class="gnb">
+                <li><a href="#">RESERVATION</a>
+                    <ul class="submenu">
+                        <li><a href="#">Room&Package</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ACCOMMODATION</a>
+                    <ul class="submenu">
+                        <li><a href="#">Standard</a></li>
+                        <li><a href="#">Deluxe</a></li>
+                        <li><a href="#">Family Room</a></li>
+                        <li><a href="#">Suite</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">BANQUET&WEDDING</a>
+                    <ul class="submenu">
+                        <li><a href="#">Banquet</a></li>
+                        <li><a href="#">Wedding</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FACILITIES</a>
+                    <ul class="submenu">
+                        <li><a href="#">Business<br/>Center</a></li>
+                        <li><a href="#">Indoor<br/>Pool&Gym</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">SPECIAL OFFERS</a>
+                    <ul class="submenu">
+                        <li><a href="#">Promotion</a></li>
+                        <li><a href="#">Tour Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <div id="slide">
+            <div><img src="images/main.png" alt="" /></div>
+            <div><img src="images/main02.png" alt="" /></div>
+            <div><img src="images/main03.png" alt="" /></div>
+        </div>
+
+        <div id="selectBox">
+            <nav>
+                <div class="hr"></div>
+                <input type="date" 
+                        data-placeholder="Check In" 
+                        required 
+                        aria-required="true" 
+                        onChange={StartDateValueHandler}
+                        value="checkIn">
+                </input>
+
+                <input type="date" 
+                        data-placeholder="Check Out"
+                        required
+                        aria-required="true"
+                        onChange={StartDateValueHandler}
+                        value="checkOut">
+                </input>
+
+                <select name="addGuest">
+                    <option value="">Add Guest</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <select name="room">
+                    <option value="">Room</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Family Room">Family Room</option>
+                    <option value="Suite">Suite</option>
+                </select>
+            </nav>
+            <span>Search</span>
+            <p>chek in 15:00 ~ chek out 11:00</p>
+        </div>
+    </div>
+    
+    <div id="room">
+        <h3>ROOM PACKAGE</h3>
+        <nav>
+            <dl>
+                <a href="#">
+                    <img src="images/room01.png" alt="" />
+                    <dt>STANDARD</dt>
+                </a>
+            </dl>
+            <dl>
+                <a href="#">
+                    <img src="images/room02.png" alt="" />
+                    <dt>DELUXE</dt>
+                </a>
+            </dl>
+            <dl>
+                <a href="#">
+                    <img src="images/room03.png" alt="" />
+                    <dt>SUITE</dt>
+                </a>
+            </dl>
+        </nav>
+
+        <span>Reservation</span>
+    </div>
+
+    <div id="BnW">
+        <h3>BANQUET&WEDDING</h3>
+        <dl>
+            <a href="#">
+                <img src="images/wed01.png" alt="" />
+                <dt>Photo Shooting Event</dt>
+            </a>
+        </dl>
+        <dl>
+            <a href="#">
+                <img src="images/wed02.png" alt="" />
+                <dt>A Banquet Hall Rental (~30% DC)</dt>
+            </a>
+        </dl>
+    </div>
+
+    <div id="tour">     
+        <h3>TOUR GUIDE</h3>       
+        <img src="images/tour.png">
+        <a href="#"></a>
+    </div>
+
+    <footer>
+        <div id="top">
+            <ul class="main">
+                <li>
+                    <a href="#">Reservation</a>
+                    <ul class="sub">
+                        <li><a href="#">Room&Package</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="main">
+                <li>
+                    <a href="#">Accommodation</a>
+                    <ul class="sub">
+                        <li><a href="#">Standard</a></li>
+                        <li><a href="#">Deluxe</a></li>
+                        <li><a href="#">Family Room</a></li>
+                        <li><a href="#">Suite</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="main">
+                <li>
+                    <a href="#">Banquet&Wedding</a>
+                    <ul class="sub">
+                        <li><a href="#">Banquet</a></li>
+                        <li><a href="#">Wedding</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="main">
+                <li>
+                    <a href="#">Facilities</a>
+                    <ul class="sub">
+                        <li><a href="#">Business Center</a></li>
+                        <li><a href="#">Indoor Pool&Gym</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="main">
+                <li>
+                    <a href="#">Special Offers</a>
+                    <ul class="sub">
+                        <li><a href="#">Promotion</a></li>
+                        <li><a href="#">Tour Guide</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="bottom">
+            <nav>
+                <h1><a href="#"><img src="images/logo.svg" alt="" /></a></h1>
+                <p>COPYRIGHT©2022. AMOROT HOTEL, ALL RIGHT RESERVED. Design By LJY</p>
+                <p>TEL: 000-0000-0000 FAX: 000-0000-0000</p>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

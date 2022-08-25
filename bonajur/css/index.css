@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    width: 1300px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+header h1 {
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+}
+
+header h1 img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+header nav {
+    width: 1100px;
+    height: 100px;
+    float: left;
+    margin-left: 30px;
+    position: relative;
+}
+
+header nav ul#gnb {
+    float: left;
+    position: absolute;
+    z-index: 3;
+}
+
+header nav ul#gnb > li {
+    float: left;
+    margin-left: 60px;
+}
+
+header nav ul#gnb > li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+header nav ul#gnb > li > a {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 100px;
+}
+
+header nav ul#subMenu {
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+
+header nav ul#subMenu > li {
+    text-align: center;
+}
+
+header nav ul#gnb > li:nth-of-type(4) ul#subMenu {
+    margin-left: 10px;
+}
+
+header nav ul#gnb > li:nth-of-type(5) ul#subMenu {
+    margin-left: 25px;
+}
+
+header nav ul#subMenu > li > a {
+    color: #393939;
+    line-height: 35px;
+    font-size: 0.85rem;
+}
+
+header nav ul#subMenu > li > a:hover {
+    color: #6A50AC;
+    font-weight: bold;
+}
+
+header nav ol {
+    float: right;
+}
+
+header nav ol li {
+    float: left;
+    margin-top: 38px;
+    margin-right: 20px;
+}
+
+header nav ol li a {
+    color: black;
+}
+
+header nav ol li img {
+    width: 25px;
+    height: 25px;
+}
+
+header nav #subMenuSlide {
+    position: relative;
+    top: 100px;
+    left: -30px;
+    width: 900px;
+    height: 0;
+    background: white;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 20px 20px;
+    z-index: 1;
+}
+
+#main #wrab {
+    width: 1270px;
+    height: 590px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main #wrab p {
+    position: absolute;
+    margin-top: 3px;
+}
+
+#main .big {
+    width: 650px;
+    float: left;
+    cursor: pointer;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+#main img {
+    width: 100%;
+    transition: all 0.4s;
+}
+
+#main .small {
+    width: 270px;
+    float: left;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+#main img:hover {
+    transform: scale(1.15);
+}
+
+#main .small:nth-of-type(2) {
+    margin-left: 0;
+}
+
+#main .small:nth-of-type(4) {
+    margin-left: 0;
+}
+
+#maySale {
+    width: 1270px;
+    height: 480px;
+    margin: 90px auto 50px;
+    position: relative;
+}
+
+#maySale h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+}
+
+#maySale span {
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    cursor: pointer;
+    color: #393939;
+}
+
+#maySale span:hover {
+    color: black;
+    font-weight: bold;
+}
+
+#maySale ul li {
+    float: left;
+    margin-left: 40px;
+    overflow: hidden;
+}
+
+#maySale ul li a img {
+    width: 265px;
+}
+
+#maySale ul li p {
+    text-align: center;
+    color: black;
+    background: white;
+}
+
+#maySale ul li p:nth-of-type(1) {
+    font-weight: 700;
+    font-size: 1.13rem;
+    margin-top: 8px;
+}
+
+#maySale ul li p:nth-of-type(2) {
+    float: left;
+    color: #7E7E7E;
+    text-decoration: line-through;
+    margin-left: 60px;
+    margin-right: 10px;
+}
+
+#maySale ul li p:nth-of-type(3) {
+    float: left;
+    color: #6A50AC;
+}
+
+.banner {
+    width: 1270px;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner span {
+    position: absolute;
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    line-height: 43px;
+    background: black;
+    width: 120px;
+    height: 43px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.banner span.first {
+    background: #E19805;
+    right: 60px;
+    bottom: 47px;
+}
+
+.banner span.second {
+    left: 60px;
+    bottom: 45px;
+}
+
+.banner span:hover {
+    box-shadow: 2px 7px 3px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    width: 1270px;
+    height: 460px;
+    margin: 90px auto 0;
+    position: relative;
+}
+
+footer hr {
+    width: 1270px;
+    height: 2px;
+    background: #BEBEBE;
+    border: none;
+    margin: 20px 0;
+}
+
+footer hr:nth-of-type(2) {
+    margin-top: 290px;
+}
+
+footer h1 {
+    width: 180px;
+}
+
+footer h1 img {
+    width: 100%;
+}
+
+footer ol {
+    width: 155px;
+    height: 34px;
+    margin: 15px 0 0 10px;
+    float: left;
+}
+
+footer ol li {
+    float: left;
+    margin-left: 25px;
+}
+
+footer ol li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+footer ol li img {
+    width: 34px;
+    height: 34px;
+}
+
+footer ul#footerGnb {
+    position: absolute;
+    left: 250px;
+    top: 36px;
+}
+
+footer ul#footerGnb li a {
+    color: black;
+}
+
+footer ul#footerGnb > li {
+    float: left;
+    margin-left: 100px;
+}
+
+footer ul#footerGnb > li a {
+    font-weight: 600;
+}
+
+footer ul#footerGnb > li:first-child {
+    margin-left: 0;
+}
+
+footer ul#footerSub li {
+    margin-bottom: 10px;
+}
+
+footer ul#footerSub li:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+footer ul#footerSub > li a {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #585858;
+}
+
+footer ul#footerSub > li:hover a {
+    font-weight: 600;
+    color: #6A50AC;
+}
+
+footer p {
+    font-weight: 400;
+    color: #969696;
+    font-size: 0.85rem;
+    cursor: pointer;
+}

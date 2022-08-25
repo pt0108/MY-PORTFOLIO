@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">    
+    <title>LED.ART</title>
+    <style>
+        header {
+            position: fixed;
+            width: 100%;
+            background: white;
+            z-index: 2;
+        }
+
+        header nav {
+            width: 1130px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 105px;
+            position: relative;
+        }
+
+        header nav h1 {
+            width: 100px;
+        }
+
+        header nav h1 img {
+            width: 100%;
+        }
+
+        header ul li {
+            float: left;
+            margin-left: 26px;
+            font-size: 0.7rem;
+            padding-bottom: 5px;
+        }
+
+        header ul li:first-child {
+            margin-left: 0;
+            border-bottom:1px solid silver;
+        }
+
+        header ul li:first-child a {
+            color: black;
+        }
+
+        header a {
+            color: #606060;
+        }
+
+        header ol {
+            position: relative;
+        }
+
+        header ol li {
+            float: left;
+            font-size: 0.9rem;
+            font-weight: 100;
+        }
+
+        header li:hover {
+            opacity: 0.6;
+        }
+
+        header ol li:nth-of-type(2) {
+            margin-left: 20px;
+        }
+
+        header #lang {
+            display: none;
+            position: absolute;
+            background: white;
+            width: 150px;
+            height: 100px;
+            right: 0;
+            top: 80px;
+            z-index: 10;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+            padding-left: 15px;
+            padding-top: 15px;
+            border-radius: 5px;
+        }
+
+        header #lang span {
+            color: #606060;
+            font-size: 0.9rem;
+            font-weight: 100;
+            cursor: pointer;
+        }
+
+        header #lang hr {
+            width: 120px;
+            height: 1px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #visual {
+            height: 100%;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        #visual video {
+            width: 100%;
+        }
+
+        #visual section {
+            position: absolute;
+            width: 1260px;
+            height: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        #visual section h2 {
+            font-size: 4rem;
+            color: white;
+            text-align: center;
+            width: 100%;
+            font-weight: 100;
+        }
+
+        #visual section dl {
+            width: 612px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px 30px;
+        }
+
+        #visual section dl dt {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+
+        #visual section dl dd {
+            font-weight: 100;
+            font-size: 0.95rem;
+        }
+
+        #visual section dl dd span {
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+
+        #visual section dl a {
+            display: block;
+            width: 135px;
+            height: 36px;
+            background: black;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 34px;
+        }
+
+        #visual02 {
+            height: 100%;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        #visual02 video {
+            width: 100%;
+        }
+
+        #visual02 section {
+            position: absolute;
+            width: 1260px;
+            height: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 1630px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        #visual02 section dl {
+            width: 612px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px 30px;
+        }
+
+        #visual02 section dl a {
+            display: block;
+            width: 135px;
+            height: 36px;
+            background: black;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 34px;
+        }
+
+        #visual02 section dl dt {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+
+        #visual02 section dl dd {
+            font-weight: 100;
+            font-size: 0.95rem;
+        }
+
+        #visual02 section dl dd span {
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+
+        #visual02 section dl:nth-of-type(2) {
+            background: black;
+            color: white;
+        }
+
+        #visual02 section dl:nth-of-type(2) a {
+            border: 1px solid white;
+        }
+
+        #gallery {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #gallery div {
+            width: calc(50% - 2px);
+            height: 40vw;
+            background: green;
+            margin-bottom: 2px;
+            float: left;
+            padding: 20px;
+            position: relative;
+        }
+
+        #gallery div:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            z-index: 1;
+            transition: all 0.3s;
+        }
+
+        #gallery div a {
+            position: inline-block;
+            position: absolute;
+            z-index: 2;
+        }
+
+        #gallery div:hover a {
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        #gallery div:hover::after {
+            opacity: 0;
+        }
+
+        #gallery div:nth-of-type(1) {
+            margin-right: 4px;
+            background: url(images/black.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        #gallery div:nth-of-type(2) {
+            background: url(images/whale.jpg) no-repeat;
+            background-size: cover; 
+        }
+
+        #gallery div:nth-of-type(3) {
+            height: 80vw;
+            margin-right: 4px;
+            background: url(images/surreal.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        #gallery div:nth-of-type(4) {
+            background: url(images/rysli.png) no-repeat;
+            background-size: cover; 
+        }
+
+        #gallery div:nth-of-type(5) {
+            background: url(images/string.png) no-repeat;
+            background-size: cover; 
+        }
+
+
+        #gallery div h4 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+
+        #gallery div p {
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 100;
+        }
+
+        footer {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background: black;    
+        }
+
+        footer ul, footer ol, footer p {
+            display: inline-block;
+        }
+
+        footer ol {
+            margin-bottom: 13px;
+        }
+
+        footer ol li {
+            margin-left: 30px;
+        }
+
+        footer ol li a {
+            font-size: 1.3rem;
+        }
+
+        footer ol li:nth-of-type(1) {
+            margin-left: 0;
+        }
+
+        footer li {
+            float: left;
+            margin-left: 20px;
+        }
+
+        footer a, footer span, footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer ul#rule li {
+            margin-left: 0;
+        }
+
+        footer ul#uxfoot li a {
+            font-size: 0.75rem;
+            font-weight: 100;
+        }
+
+        footer span {
+            font-size: 0.75rem;
+            font-weight: 100;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        footer ul#rule {
+            margin-bottom: 30px;
+        }
+
+        footer ul#rule li a {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer ul#rule li::before {
+            content: "|";
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer ul#rule li:first-child::before {
+            content: none;
+        }
+
+        footer p {
+            font-size: 0.75rem;
+            font-weight: 100;
+        }
+
+        #btnTop {
+            position: fixed;
+            bottom: 63px;
+            right: 15px;
+            z-index: 3;
+        }
+
+        #btnDown {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            z-index: 3;
+        }
+
+    </style>
+    <script src="script/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $('header nav ol li').eq(1).click(function(){
+                $('header nav #lang').toggle();
+                return false;
+            });
+
+            $("#btnTop").click(function(){
+                $("html, body").animate({scrollTop:0});
+            });
+
+            $("#btnDown").click(function(){
+                $("html, body").animate({scrollTop:4000});
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                <a href="#"><img src="images/logo.png" alt="로고"></a>
+            </h1>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">COLLECTION</a></li>
+                <li><a href="#">ENTERPRISE</a></li>
+                <li><a href="#">SUPPORT</a></li>
+            </ul>
+            <ol>
+                <li><a href="#"><i class="zmdi zmdi-search"></i></a></li>
+                <li><a href="#">KOR <i class="zmdi zmdi-triangle-down"></i></a></li>
+            </ol>
+            <div id="lang">
+                <span>KOR</span>
+                <hr/>
+                <span>ENG</span>
+            </div>
+        </nav>
+    </header>
+
+    <div id="visual">
+        <video autoplay muted loop>
+            <source src="video/visual.mp4" />
+        </video>
+        <section>
+            <h2>MEDIA ART EVERYWHERE</h2>
+            <dl>
+                <dt>FEATURED : GEMSTONE - COLOR</dt>
+                <dd>
+                    우리는 무엇을 향해 끊임없이 앞으로 나아가고 있는가? 어느 한 지점에 도달하기 위해 각자 달려가는 
+                    모습과 방법은 다르지만 간절히 원하는 그 어떤 잠재적 가치를 위해 노력하는 모습은 눈부시게 아름답다. 
+                    화면 가득 일렁이는 다채로운 원석을 뚫고 끊임없이 앞으로 나아가는 이들 또한, 목표한 지점을 향해 확고하게 한 방향으로 전진한다. 
+                    각기 다른 방식으로, 각기 다른 움직임과 호흡으로, 느리기도, 빠르기도 한 저만의 속도로, 모두 다르지만 결코 멈추지 않고 나아간다. 
+                    그들이 나아가는 걸음, 걸음이 반짝이는 순간들에 휩싸여 찬란하게 빛난다. 
+                    <a href="#">더 알아보기</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>LED.ART'S COLLECTION</dt>
+                <dd>
+                    <span>LED.ART ORIGINAL COLLECTION으로 <br/>
+                        새로운 공간 경험을 창조하세요.</span>
+                    <a href="#">더 알아보기</a>
+                </dd>
+            </dl>
+        </section>
+    </div>
+
+    <div id="visual02">
+        <video autoplay muted loop>
+            <source src="video/visual02.mp4" />
+        </video>
+        <section>
+            <dl>
+                <dt>FEATURED : BREATHING TREE - SERIES A</dt>
+                <dd>
+                    나무(자연)는 숨을 쉰다.
+                    눈으로는 볼 수 없는 자연의 호흡과 시간의 흐름에 집중해 이를 시각적 문접으로 해석해 낸 트리 
+                    시리즈 연작. 비일상적 이미지로 표현된 자연을 감상하는 경험에서 자연이 주는 몰입감과 해방을 느껴본다.
+                    <a href="#">더 알아보기</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>ENTERPRISE LICENSE</dt>
+                <dd>
+                    <span>8개의 LED.ART ORIGINAL MEDIA ART를 
+                        1년 동안 합리적인 가격으로 사용 하세요.</span>
+                    <a href="#">더 알아보기</a>
+                </dd>
+            </dl>
+
+    </div>
+
+    <div id="gallery">
+        <div>
+            <a href="#">
+                <h4>ART PERFORMANCE BLACK</h4>
+                <p>다양한 가치관을 가진 사람들이 어우러진 세상의 모습을 다른 차원과 
+                    공간 속 두 사람의 움직임으로 표현한 미디어 아트 작품이다.</p>    
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h4>WHALE</h4>
+                <p>고래가 가상의 입체적인 공간 속에서 유영하는 모습을 담은 작품이다.</p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h4>SURREAL CREATURES</h4>
+                <p>무심결에 기억 속에 자리 잡은 당연한 모습들이 우리의 기억과는 다른 모습을 하기 시작했을 때,
+                    우리는 그것에 묘한 충격을 받고 시각적 일탈을 경험하게 된다.</p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h4>RYSLI - SERIES A</h4>
+                <p>자연의 색채를 입은 깃털들이 데이터로 구현된 바람에 실려 휘날리는 자연의 움직임을 재현한다.</p>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h4>STRING</h4>
+                <p>끝없이 생성되고 소멸하는 STRING을 모티브로 초현실적인 풍경이 펼쳐진다.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <ol>
+            <li><a href="#"><i class="zmdi zmdi-vimeo"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-linkedin-box"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-pinterest"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-youtube-play"></i></a></li>
+        </ol>
+        <ul id="uxfoot">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">COLLECTION</a></li>
+            <li><a href="#">ENTERPRISE</a></li>
+            <li><a href="#">SUPPORT</a></li>
+        </ul>
+        <span>LED.ART KR</span>
+        <ul id="rule">
+            <li><a href="#">서비스 약관</a></li>
+            <li><a href="#">라이선스 약관</a></li>
+            <li><a href="#">개인정보보호방침</a></li>
+        </ul>
+        <p>Copyright © 2022 LED.ART KR All rights reserved.</p>
+    </footer>
+
+    <a href="#" id="btnTop"><img src="images/top.png"></a>
+    <a href="#" id="btnDown"><img src="images/down.png"></a>
+</body>
+</html>
