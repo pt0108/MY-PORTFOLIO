@@ -25,6 +25,10 @@ header nav h1 {
     margin-top: 10px;
 }
 
+header nav h1 img {
+    width: 100px;
+}
+
 header nav span {
     float: right;
 }
@@ -580,13 +584,13 @@ footer nav {
 }
 
 footer nav h1 {
-    width: 39px;
+    width: 80px;
     float: left;
-    margin-top: 16px;
+    margin-top: 5px;
 }
 
 footer nav h1 img {
-    width: 39px;
+    width: 100%;
 }
 
 footer nav p {
