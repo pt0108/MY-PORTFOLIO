@@ -37,6 +37,7 @@ $(function(){
         if (scroll < wh - 400 ){
             $('li#sideux-main').addClass('menuActive');
             $('li#sideux-design').removeClass('menuActive');
+            $('li#sideux-contact').removeClass('menuActive');
 
         } else if ( wh - 400 <= scroll && scroll < wh*2 - 380) {
             $('li#sideux-main').removeClass('menuActive');
