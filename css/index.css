@@ -381,16 +381,16 @@ header nav span.menu hr:nth-of-type(3) {
 }
 
 #about #contents span#profileEdu h3 {
-    font-size: 2.25rem;
+    font-size: 1.8rem;
     font-family: 'SBAggroB';
     margin-top: 3px;
     margin-bottom: 12px;
 }
 
 #about #contents span#profileEdu p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'SBAggroM';
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 #about #contents span#catch {
