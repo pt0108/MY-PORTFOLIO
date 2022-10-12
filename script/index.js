@@ -179,7 +179,7 @@ $(function(){
         }
     });
 
-    //qna 버튼 누르면 열고 닫는 효과->포기!
+    //qna 버튼 누르면 열고 닫는 효과
     $('#about #qna dl dt a').eq(0).click(function(){
         $('#about #qna dl dd').eq(0).toggleClass('answer');
         return false;
